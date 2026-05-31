@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Alqahtani A. Aldanah · Plant Evolutionary Genomics &amp; Bioinformatics</title>
+  <meta name="description" content="Dr. Alqahtani A. Aldanah — Plant Evolutionary Genomics & Bioinformatics. Prince Sattam bin Abdulaziz University at Al-Kharj.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #FAF7FC;
+      --lilac-soft: #F1EAF5;
+      --purple: #8E6BC4;
+      --purple-dark: #6B4DA0;
+      --purple-light: #A98BD4;
+      --gold: #C9A55C;
+      --text: #2C2630;
+      --text-muted: #6B6275;
+      --border: rgba(142, 107, 196, 0.15);
+      --max-width: 880px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'EB Garamond', Georgia, serif; color: var(--text); background: var(--cream); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased; }
+
+    /* NAV */
+    nav { position: absolute; top: 0; left: 0; right: 0; z-index: 10; padding: 28px 6vw; display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
+    .lab-mark { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 16px; color: white; letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none; }
+    .nav-links { display: flex; gap: 4px; list-style: none; }
+    .nav-links a { font-family: 'Cormorant Garamond', serif; color: white; font-size: 12px; letter-spacing: 0.3em; text-transform: lowercase; text-decoration: none; padding: 8px 16px; border: 1px solid transparent; transition: all 0.35s; }
+    .nav-links a:hover, .nav-links a.active { border-color: rgba(255,255,255,0.8); }
+
+    /* HERO */
+    .hero { position: relative; height: 60vh; min-height: 440px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; overflow: hidden; background: linear-gradient(135deg, #6B4DA0 0%, #8E6BC4 50%, #A98BD4 100%); }
+    .hero::before { content: ''; position: absolute; inset: 0; opacity: 0.07; background-image: radial-gradient(circle at 20% 30%, white 1.5px, transparent 2.5px), radial-gradient(circle at 80% 70%, white 1.5px, transparent 2.5px), radial-gradient(circle at 50% 50%, white 1px, transparent 2px); background-size: 90px 90px, 90px 90px, 40px 40px; }
+    .hero-content { position: relative; z-index: 2; padding: 0 24px; max-width: 1200px; animation: fadeUp 1.2s ease-out; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(18px, 3.6vw, 42px); letter-spacing: 0.01em; line-height: 1.2; margin-bottom: 32px; text-shadow: 0 2px 16px rgba(0,0,0,0.2); white-space: nowrap; }
+    .lab-title { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(22px, 2.6vw, 28px); margin-bottom: 4px; letter-spacing: 0.02em; }
+    .lab-title-ar { font-family: 'Amiri', serif; font-size: 18px; color: var(--gold); margin-bottom: 14px; direction: rtl; }
+    .affiliation { font-style: italic; font-size: 14.5px; letter-spacing: 0.04em; opacity: 0.95; max-width: 540px; margin: 0 auto; }
+
+    /* MAIN */
+    .main-content { max-width: var(--max-width); margin: 0 auto; padding: 60px 32px 30px; }
+    .welcome-heading { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 30px; color: var(--purple-dark); text-align: center; margin-bottom: 12px; }
+    .welcome-heading .arabic { font-family: 'Amiri', serif; font-weight: 700; direction: rtl; margin-right: 8px; color: var(--purple); }
+
+    .quote-line { text-align: center; max-width: 660px; margin: 0 auto 50px; }
+    .quote-line .ar { font-family: 'Amiri', serif; font-size: 17px; color: var(--purple-dark); direction: rtl; margin-bottom: 6px; line-height: 1.5; }
+    .quote-line .en { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15.5px; color: var(--purple); font-weight: 500; }
+    .quote-line .attr { font-family: 'Cormorant Garamond', serif; font-size: 11.5px; color: var(--text-muted); margin-top: 8px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; }
+
+    /* WELCOME TEXT */
+    .welcome-text { max-width: 700px; margin: 0 auto; }
+    .welcome-text p { font-size: 17.5px; line-height: 1.9; color: var(--text); margin-bottom: 20px; text-align: justify; }
+    .welcome-text p em { font-style: italic; color: var(--purple-dark); font-weight: 500; }
+    .welcome-text p strong { color: var(--purple-dark); font-weight: 600; }
+    .welcome-text .opener { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; line-height: 1.55; color: var(--purple-dark); text-align: center; margin-bottom: 32px; padding: 0 8px; font-weight: 500; }
+    .welcome-text .vision-intro { margin-top: 30px; margin-bottom: 14px; font-weight: 500; color: var(--purple-dark); text-align: left; }
+
+    /* Three commitments — bullets with gold diamonds */
+    .commitments { list-style: none; padding: 0; margin: 0 0 12px 0; }
+    .commitments li { position: relative; padding: 10px 0 10px 28px; font-size: 17px; line-height: 1.75; text-align: left; }
+    .commitments li::before { content: '◆'; position: absolute; left: 4px; top: 12px; color: var(--gold); font-size: 12px; }
+    .commitments li strong { color: var(--purple-dark); font-weight: 600; }
+    .commitments li em { font-style: italic; color: var(--purple-dark); font-weight: 500; }
+
+    /* CTA */
+    .cta-row { text-align: center; margin: 50px auto 20px; }
+    .cta-link { display: inline-block; font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: white; text-decoration: none; padding: 14px 36px; background: var(--purple); border-radius: 32px; transition: all 0.35s ease; box-shadow: 0 4px 14px rgba(142, 107, 196, 0.25); }
+    .cta-link:hover { background: var(--purple-dark); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(107, 77, 160, 0.35); }
+    .cta-link::after { content: ' →'; opacity: 0.85; margin-left: 4px; }
+
+    /* CONTACT BAND */
+    .contact-band { background: linear-gradient(135deg, var(--lilac-soft) 0%, white 100%); margin-top: 80px; padding: 60px 32px 50px; border-top: 1px solid var(--border); }
+    .contact-inner { max-width: var(--max-width); margin: 0 auto; }
+    .contact-eyebrow { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 600; }
+    .contact-heading { text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; color: var(--purple-dark); margin-bottom: 36px; }
+    .contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px; }
+    .contact-card { background: white; padding: 28px 28px; border-radius: 8px; box-shadow: 0 2px 14px rgba(74, 42, 117, 0.07); border: 1px solid var(--border); display: flex; gap: 18px; align-items: flex-start; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .contact-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12); }
+    .contact-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #EFE6F7, #F1EAF5); display: flex; align-items: center; justify-content: center; color: var(--purple-dark); }
+    .contact-content { flex: 1; }
+    .contact-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 12.5px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--purple-dark); margin-bottom: 8px; }
+    .contact-content p { font-size: 14.5px; line-height: 1.65; color: var(--text); margin: 0; }
+    .contact-content a { color: var(--purple-dark); text-decoration: none; border-bottom: 1px solid var(--gold); transition: color 0.3s; }
+    .contact-content a:hover { color: var(--purple); }
+    .copyright { text-align: center; font-size: 11.5px; color: var(--text-muted); opacity: 0.7; letter-spacing: 0.12em; padding-top: 24px; border-top: 1px solid var(--border); }
+
+    @media (max-width: 800px) {
+      nav { padding: 18px 20px; flex-direction: column; gap: 14px; }
+      .nav-links { flex-wrap: wrap; gap: 0; justify-content: center; }
+      .nav-links a { font-size: 10.5px; padding: 6px 10px; letter-spacing: 0.2em; }
+      .hero { height: auto; padding: 130px 0 70px; min-height: 0; }
+      .hero h1 { margin-bottom: 28px; }
+      .main-content { padding: 40px 22px 24px; }
+      .welcome-text p { text-align: left; }
+      .welcome-text .opener { font-size: 18px; }
+      .contact-cards { grid-template-columns: 1fr; gap: 16px; }
+      .contact-band { padding: 50px 24px 40px; }
+      .contact-card { padding: 22px 22px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="lab-mark">Dr. Alqahtani Aldanah</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">home</a></li>
+      <li><a href="research.html">research</a></li>
+      <li><a href="students.html">students</a></li>
+      <li><a href="concepts.html">concepts</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Plant Evolutionary Genomics &amp; Bioinformatics</h1>
+      <div class="lab-title">Dr. Alqahtani A. Aldanah</div>
+      <div class="lab-title-ar">د. الدانه بنت عايض القحطاني</div>
+      <p class="affiliation">Department of Biology &middot; Prince Sattam bin Abdulaziz University at Al-Kharj</p>
+    </div>
+  </section>
+
+  <main class="main-content">
+
+    <h2 class="welcome-heading">Welcome &middot; <span class="arabic">أهلاً وسهلاً بكم</span></h2>
+
+    <div class="quote-line">
+      <p class="ar">همة السعوديين مثل جبل طويق، لن تنكسر إلا إذا انهدّ هذا الجبل وتساوى بالأرض</p>
+      <p class="en">"The Saudis' strength is like that of the Tuwaiq mountain — unbreakable, unless this mountain is leveled and equaled to the ground."</p>
+      <p class="attr">HRH Crown Prince Mohammed bin Salman &middot; Riyadh, 2018</p>
+    </div>
+
+    <!-- ============ AGREED WELCOME WORDING ============ -->
+    <div class="welcome-text">
+      <p class="opener">Every plant carries a hidden language written in its DNA — a chemistry shaped by millions of years of survival in harsh environments.</p>
+
+      <p>I am a plant scientist who reads this language in the native flora of <strong>Saudi Arabia</strong>. Our plants have evolved a remarkable arsenal of <em>secondary metabolites</em> — natural molecules that helped them survive heat, drought, and salt, and that today hold promise as future <em>medicines, anticancer agents,</em> and <em>bio-based products</em>.</p>
+
+      <p>To uncover them, I combine three layers of biological data — a plant's <em>genome</em> (its DNA blueprint), its <em>transcriptome</em> (the mRNA showing which genes are switched on), and its <em>metabolome</em> (the metabolites a plant actually produces). I then apply <em>bioinformatics</em> — <strong>using computers to make sense of biological data</strong> — to trace each compound from its DNA origin to the molecule itself.</p>
+
+      <p class="vision-intro">Aligned with <strong>Saudi Vision 2030</strong>, my work pursues three commitments:</p>
+
+      <ul class="commitments">
+        <li><strong>Bioprospecting</strong> — systematically searching Saudi plants for valuable natural products that can advance <em>medicine, biotechnology,</em> and the <em>bioeconomy</em>.</li>
+        <li><strong>Conservation</strong> — using genomic tools to protect Saudi plant biodiversity and build resilient landscapes for a changing climate.</li>
+        <li><strong>People &amp; Society</strong> — training a new generation of Saudi scientists and sharing plant science with the wider community to inform public awareness and traditional knowledge of our flora.</li>
+      </ul>
+    </div>
+
+    <div class="cta-row">
+      <a href="research.html" class="cta-link">My Work at a Glance</a>
+    </div>
+
+  </main>
+
+  <section class="contact-band" id="contact">
+    <div class="contact-inner">
+      <p class="contact-eyebrow">Get in Touch</p>
+      <h3 class="contact-heading">Contact &amp; Address</h3>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="contact-content">
+            <h4>Address</h4>
+            <p>Department of Biology<br>Prince Sattam bin Abdulaziz University<br>Address 18, Al-Kharj 11942<br>Riyadh Province · Kingdom of Saudi Arabia</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="contact-content">
+            <h4>Email</h4>
+            <p><a href="mailto:ald.alqahtani@psau.edu.sa">ald.alqahtani@psau.edu.sa</a></p>
+          </div>
+        </div>
+      </div>
+
+      <p class="copyright">&copy; 2026 Plant Evolutionary Genomics &amp; Bioinformatics</p>
+    </div>
+  </section>
+
+</body>
+</html>

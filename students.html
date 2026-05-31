@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students &amp; Research Teams · Dr. Alqahtani A. Aldanah</title>
+  <meta name="description" content="Students and research teams supervised by Dr. Alqahtani A. Aldanah at Prince Sattam bin Abdulaziz University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --cream: #FAF7FC; --lilac-soft: #F1EAF5; --purple: #8E6BC4; --purple-dark: #6B4DA0; --purple-light: #A98BD4; --purple-soft: #EFE6F7; --gold: #C9A55C; --gold-dark: #9C7E40; --text: #2C2630; --text-muted: #6B6275; --border: rgba(142, 107, 196, 0.15); --max-width: 1100px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'EB Garamond', Georgia, serif; color: var(--text); background: var(--cream); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased; }
+
+    nav { background: var(--purple-dark); padding: 20px 6vw; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .lab-mark { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 16px; color: white; letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none; }
+    .nav-links { display: flex; gap: 4px; list-style: none; }
+    .nav-links a { font-family: 'Cormorant Garamond', serif; color: rgba(255,255,255,0.9); font-size: 12px; letter-spacing: 0.3em; text-transform: lowercase; text-decoration: none; padding: 8px 16px; border: 1px solid transparent; transition: all 0.35s; }
+    .nav-links a:hover { border-color: rgba(255,255,255,0.6); color: white; }
+    .nav-links a.active { border-color: var(--gold); color: white; }
+
+    .page-header { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%); color: white; padding: 70px 24px 80px; text-align: center; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; opacity: 0.07; background-image: radial-gradient(circle at 20% 30%, white 1.5px, transparent 2.5px), radial-gradient(circle at 80% 70%, white 1.5px, transparent 2.5px); background-size: 90px 90px; }
+    .page-header > * { position: relative; z-index: 1; }
+    .page-eyebrow { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(30px, 4.5vw, 48px); margin-bottom: 14px; letter-spacing: 0.01em; }
+    .page-title-ar { font-family: 'Amiri', serif; font-size: 22px; color: var(--gold); margin-bottom: 26px; direction: rtl; }
+    .page-lead { max-width: 620px; margin: 0 auto; font-size: 16px; line-height: 1.7; opacity: 0.95; font-style: italic; }
+
+    /* Intro section */
+    .intro-section { max-width: 820px; margin: 70px auto 30px; padding: 0 32px; text-align: center; }
+    .intro-section p { font-size: 17.5px; line-height: 1.9; color: var(--text); margin-bottom: 18px; }
+    .intro-section p em { font-style: italic; color: var(--purple-dark); font-weight: 500; }
+    .intro-section p strong { color: var(--purple-dark); font-weight: 600; }
+    .divider { width: 60px; height: 1px; background: var(--gold); margin: 30px auto; }
+
+    /* Section title style */
+    .section-block { padding: 60px 32px 30px; max-width: var(--max-width); margin: 0 auto; }
+    .section-heading { text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 34px; color: var(--purple-dark); margin-bottom: 8px; }
+    .section-subheading { text-align: center; font-style: italic; color: var(--text-muted); font-size: 16px; margin-bottom: 45px; }
+
+    /* ===== Project cards (Section 1) ===== */
+    .project { background: white; border-radius: 4px; box-shadow: 0 2px 18px rgba(74, 42, 117, 0.06); margin-bottom: 28px; overflow: hidden; border-left: 4px solid var(--purple); padding: 32px 42px; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .project:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(74, 42, 117, 0.12); }
+    .project-tag { display: inline-block; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 12px; letter-spacing: 0.28em; color: var(--gold-dark); text-transform: uppercase; margin-bottom: 12px; }
+    .project-title { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(19px, 2vw, 23px); color: var(--purple-dark); line-height: 1.4; margin-bottom: 20px; }
+    .project-title em { font-style: italic; font-weight: 500; }
+    .students-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; padding-top: 16px; border-top: 1px dashed var(--border); }
+    .students-label { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--purple); }
+    .student-name { font-style: italic; color: var(--text); font-size: 16px; }
+    .student-sep { color: var(--gold); margin: 0 2px; }
+
+    /* ===== Posters Gallery (Section 2) ===== */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+    .gallery-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 14px rgba(74, 42, 117, 0.06); border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .gallery-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12); }
+    .gallery-image {
+      width: 100%; aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, var(--purple-soft) 0%, var(--lilac-soft) 100%);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--purple-light);
+    }
+    .gallery-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-card-body { padding: 18px 20px; }
+    .gallery-card h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 17px; color: var(--purple-dark); margin-bottom: 6px; }
+    .gallery-card p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+    .gallery-card .credit { font-style: italic; font-size: 12.5px; color: var(--gold-dark); margin-top: 8px; display: block; }
+
+    /* ===== Videos Section 3 ===== */
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .video-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 14px rgba(74, 42, 117, 0.06); border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .video-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12); }
+    .video-thumb {
+      width: 100%; aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%);
+      position: relative;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .video-thumb .play-icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
+    .video-thumb .play-icon svg { width: 22px; height: 22px; fill: var(--purple-dark); margin-left: 4px; }
+    .video-card-body { padding: 18px 22px; }
+    .video-card h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 17px; color: var(--purple-dark); margin-bottom: 6px; }
+    .video-card p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+    /* ===== Awards Section 4 ===== */
+    .awards-list { max-width: 720px; margin: 0 auto; }
+    .award-item { background: white; border-left: 3px solid var(--gold); padding: 22px 28px; margin-bottom: 16px; border-radius: 0 6px 6px 0; box-shadow: 0 1px 8px rgba(74, 42, 117, 0.05); display: flex; gap: 22px; align-items: flex-start; }
+    .award-year { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 16px; color: var(--gold-dark); letter-spacing: 0.05em; min-width: 64px; }
+    .award-content h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 17px; color: var(--purple-dark); margin-bottom: 4px; }
+    .award-content p { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+    /* Coming-soon empty state */
+    .coming-soon {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 50px 32px;
+      text-align: center;
+      background: white;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+    }
+    .coming-soon-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple-soft), var(--lilac-soft));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px;
+      color: var(--purple-dark);
+    }
+    .coming-soon h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; color: var(--purple-dark); margin-bottom: 8px; }
+    .coming-soon p { font-style: italic; font-size: 14.5px; color: var(--text-muted); line-height: 1.65; }
+
+    /* Contact band */
+    .contact-band { background: linear-gradient(135deg, var(--lilac-soft) 0%, white 100%); margin-top: 60px; padding: 60px 32px 50px; border-top: 1px solid var(--border); }
+    .contact-inner { max-width: var(--max-width); margin: 0 auto; }
+    .contact-eyebrow { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 600; }
+    .contact-heading { text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; color: var(--purple-dark); margin-bottom: 36px; }
+    .contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px; max-width: 880px; margin-left: auto; margin-right: auto; }
+    .contact-card { background: white; padding: 28px 28px; border-radius: 8px; box-shadow: 0 2px 14px rgba(74, 42, 117, 0.07); border: 1px solid var(--border); display: flex; gap: 18px; align-items: flex-start; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .contact-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12); }
+    .contact-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #EFE6F7, #F1EAF5); display: flex; align-items: center; justify-content: center; color: var(--purple-dark); }
+    .contact-content { flex: 1; }
+    .contact-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 12.5px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--purple-dark); margin-bottom: 8px; }
+    .contact-content p { font-size: 14.5px; line-height: 1.65; color: var(--text); margin: 0; }
+    .contact-content a { color: var(--purple-dark); text-decoration: none; border-bottom: 1px solid var(--gold); transition: color 0.3s; }
+    .copyright { text-align: center; font-size: 11.5px; color: var(--text-muted); opacity: 0.7; letter-spacing: 0.12em; padding-top: 24px; border-top: 1px solid var(--border); max-width: 880px; margin: 0 auto; }
+
+    @media (max-width: 800px) {
+      nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
+      .nav-links { flex-wrap: wrap; gap: 0; justify-content: center; }
+      .nav-links a { font-size: 10.5px; padding: 6px 10px; letter-spacing: 0.2em; }
+      .page-header { padding: 50px 24px 60px; }
+      .intro-section { margin: 50px auto 20px; padding: 0 22px; }
+      .section-block { padding: 40px 22px 20px; }
+      .project { padding: 24px 22px; }
+      .gallery-grid, .video-grid { grid-template-columns: 1fr; gap: 16px; }
+      .contact-cards { grid-template-columns: 1fr; gap: 16px; max-width: 100%; }
+      .contact-band { padding: 50px 24px 40px; }
+      .contact-card { padding: 22px 22px; }
+      .award-item { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="lab-mark">Dr. Alqahtani Aldanah</a>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="research.html">research</a></li>
+      <li><a href="students.html" class="active">students</a></li>
+      <li><a href="concepts.html">concepts</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <p class="page-eyebrow">Teaching &middot; Mentorship &middot; Research</p>
+    <h1 class="page-title">Students &amp; Research Teams</h1>
+    <p class="page-title-ar">طلابي وفِرقُهم البحثية</p>
+    <p class="page-lead">Growing the next generation of Saudi plant scientists.</p>
+  </header>
+
+  <!-- Intro -->
+  <section class="intro-section">
+    <p>Science grows through people. I mentor undergraduate students at <strong>Prince Sattam bin Abdulaziz University</strong> through hands-on research in <em>plant genomics, transcriptomics, phytochemistry,</em> and <em>bioinformatics</em> — equipping a new generation of Saudi scientists with the tools to bioprospect, conserve, and innovate.</p>
+    <p>Several of our student teams have been recognized in <strong>inter-university research competitions</strong>. Their work is showcased below.</p>
+    <div class="divider"></div>
+  </section>
+
+  <!-- ============ SECTION 1: RESEARCH PROJECTS ============ -->
+  <section class="section-block">
+    <h2 class="section-heading">Recent Research Projects</h2>
+    <p class="section-subheading">Undergraduate research training &middot; 2024–2025</p>
+
+    <!-- TO ADD A NEW PROJECT: copy one of the <article class="project">...</article> blocks below and update the contents. -->
+
+    <article class="project">
+      <span class="project-tag">Phytochemistry &amp; Essential Oils</span>
+      <h3 class="project-title">Hydrodistillation-Based Extraction of Essential Oil from <em>Origanum vulgare</em></h3>
+      <div class="students-row">
+        <span class="students-label">Students</span>
+        <span class="student-name">Jawaher S. Naqyah</span>
+        <span class="student-sep">·</span>
+        <span class="student-name">Sahar T. Albugami</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <span class="project-tag">Comparative Transcriptomics &middot; Conservation</span>
+      <h3 class="project-title">Comparative Transcriptomic Analysis of Salinity-Related Gene Families in Mangrove (<em>Rhizophora mucronata</em>) along the Jazan Coast</h3>
+      <div class="students-row">
+        <span class="students-label">Students</span>
+        <span class="student-name">Ghadeer Alarjani</span>
+        <span class="student-sep">·</span>
+        <span class="student-name">Haifa Aldawsari</span>
+        <span class="student-sep">·</span>
+        <span class="student-name">Afnan Alruwaibikh</span>
+      </div>
+    </article>
+
+    <article class="project">
+      <span class="project-tag">Bioprospecting &middot; Anti-Cancer Compounds</span>
+      <h3 class="project-title">Comparative Transcriptomic Analysis of Quercetin &amp; Kaempferol Biosynthesis in <em>Atriplex hortensis</em> in the Najd Region</h3>
+      <div class="students-row">
+        <span class="students-label">Students</span>
+        <span class="student-name">Waad Alrasheed</span>
+        <span class="student-sep">·</span>
+        <span class="student-name">Shahad Maashi</span>
+        <span class="student-sep">·</span>
+        <span class="student-name">Eman Alotaibi</span>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ============ SECTION 2: POSTERS & HAND-MADE WORK ============ -->
+  <section class="section-block">
+    <h2 class="section-heading">Posters &amp; Hand-made Work</h2>
+    <p class="section-subheading">Student-created posters, illustrations &amp; lab artwork</p>
+
+    <!--
+      TO ADD A POSTER:
+      1. Save the image into an "images" folder next to this file (e.g., images/poster-origanum.jpg)
+      2. Copy a <div class="gallery-card">...</div> block
+      3. Replace src="images/placeholder.jpg" with your filename
+      4. Update the title, description, and credit
+    -->
+
+    <div class="coming-soon">
+      <div class="coming-soon-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21,15 16,10 5,21"/>
+        </svg>
+      </div>
+      <h4>Coming Soon</h4>
+      <p>Student posters and hand-made work will be featured here as projects are completed.</p>
+    </div>
+
+    <!-- EXAMPLE GALLERY CARD (uncomment and copy when ready to add a poster):
+
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <div class="gallery-image">
+          <img src="images/placeholder.jpg" alt="Poster description">
+        </div>
+        <div class="gallery-card-body">
+          <h4>Poster Title Here</h4>
+          <p>A short description of the poster or hand-made work.</p>
+          <span class="credit">By Student Name · 2025</span>
+        </div>
+      </div>
+    </div>
+
+    -->
+
+  </section>
+
+  <!-- ============ SECTION 3: VIDEOS & PRESENTATIONS ============ -->
+  <section class="section-block">
+    <h2 class="section-heading">Videos &amp; Presentations</h2>
+    <p class="section-subheading">Student-made videos and conference presentations</p>
+
+    <!--
+      TO ADD A VIDEO:
+      Option A — Local video file:
+        Replace the <div class="video-thumb"> with: <video src="videos/your-video.mp4" controls style="width:100%; aspect-ratio:16/9; display:block;"></video>
+      Option B — YouTube embed:
+        Replace the <div class="video-thumb"> with: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" style="width:100%; aspect-ratio:16/9; border:0;" allowfullscreen></iframe>
+    -->
+
+    <div class="coming-soon">
+      <div class="coming-soon-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="23 7 16 12 23 17 23 7"/>
+          <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+        </svg>
+      </div>
+      <h4>Coming Soon</h4>
+      <p>Student videos and presentations will be added here as they are produced.</p>
+    </div>
+
+    <!-- EXAMPLE VIDEO CARD (copy and adapt when ready):
+
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-thumb">
+          <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="video-card-body">
+          <h4>Video Title</h4>
+          <p>Short description of the video content and presenter(s).</p>
+        </div>
+      </div>
+    </div>
+
+    -->
+
+  </section>
+
+  <!-- ============ SECTION 4: AWARDS & RECOGNITION ============ -->
+  <section class="section-block">
+    <h2 class="section-heading">Awards &amp; Recognition</h2>
+    <p class="section-subheading">Honors received by our student teams</p>
+
+    <!--
+      TO ADD AN AWARD: Copy one of the <div class="award-item">...</div> blocks below and update the year, title, and description.
+    -->
+
+    <div class="awards-list">
+      <div class="coming-soon">
+        <div class="coming-soon-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="7"/>
+            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+          </svg>
+        </div>
+        <h4>Coming Soon</h4>
+        <p>Recognitions from inter-university research competitions will be listed here.</p>
+      </div>
+    </div>
+
+    <!-- EXAMPLE AWARD ITEM (uncomment when ready):
+
+    <div class="awards-list">
+      <div class="award-item">
+        <div class="award-year">2025</div>
+        <div class="award-content">
+          <h4>Award or Competition Name</h4>
+          <p>Brief description — e.g., team name, project, place won.</p>
+        </div>
+      </div>
+    </div>
+
+    -->
+
+  </section>
+
+  <!-- Contact band -->
+  <section class="contact-band" id="contact">
+    <div class="contact-inner">
+      <p class="contact-eyebrow">Get in Touch</p>
+      <h3 class="contact-heading">Contact &amp; Address</h3>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-content">
+            <h4>Address</h4>
+            <p>Department of Biology<br>Prince Sattam bin Abdulaziz University<br>Address 18, Al-Kharj 11942<br>Riyadh Province · Kingdom of Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-content">
+            <h4>Email</h4>
+            <p><a href="mailto:ald.alqahtani@psau.edu.sa">ald.alqahtani@psau.edu.sa</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Plant Evolutionary Genomics &amp; Bioinformatics</p>
+    </div>
+  </section>
+
+</body>
+</html>

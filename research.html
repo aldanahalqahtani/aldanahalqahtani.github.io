@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Work at a Glance · Dr. Alqahtani A. Aldanah</title>
+  <meta name="description" content="Research at a glance — from molecules, to meaning, to impact.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --cream: #FAF7FC; --lilac-soft: #F1EAF5; --purple: #8E6BC4; --purple-dark: #6B4DA0; --purple-light: #A98BD4; --gold: #C9A55C; --text: #2C2630; --text-muted: #6B6275; --border: rgba(142, 107, 196, 0.15); --max-width: 880px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'EB Garamond', Georgia, serif; color: var(--text); background: var(--cream); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased; }
+
+    nav { background: var(--purple-dark); padding: 20px 6vw; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .lab-mark { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 16px; color: white; letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none; }
+    .nav-links { display: flex; gap: 4px; list-style: none; }
+    .nav-links a { font-family: 'Cormorant Garamond', serif; color: rgba(255,255,255,0.9); font-size: 12px; letter-spacing: 0.3em; text-transform: lowercase; text-decoration: none; padding: 8px 16px; border: 1px solid transparent; transition: all 0.35s; }
+    .nav-links a:hover { border-color: rgba(255,255,255,0.6); color: white; }
+    .nav-links a.active { border-color: var(--gold); color: white; }
+
+    .page-header { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%); color: white; padding: 70px 24px 80px; text-align: center; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; opacity: 0.07; background-image: radial-gradient(circle at 20% 30%, white 1.5px, transparent 2.5px), radial-gradient(circle at 80% 70%, white 1.5px, transparent 2.5px); background-size: 90px 90px; }
+    .page-header > * { position: relative; z-index: 1; }
+    .page-eyebrow { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(28px, 4vw, 44px); margin-bottom: 12px; letter-spacing: 0.01em; white-space: nowrap; }
+    .page-lead { max-width: 580px; margin: 0 auto; font-size: 16px; line-height: 1.7; opacity: 0.95; font-style: italic; }
+
+    .main-content { max-width: var(--max-width); margin: 0 auto; padding: 60px 32px 30px; }
+    .lead-para { max-width: 720px; margin: 0 auto 50px; text-align: center; font-size: 17.5px; line-height: 1.9; color: var(--text); }
+    .lead-para em { font-style: italic; color: var(--purple-dark); font-weight: 500; }
+    .lead-para strong { color: var(--purple-dark); font-weight: 600; }
+
+    .infographic-wrap { max-width: 720px; margin: 0 auto; padding: 28px 24px; background: white; border-radius: 6px; box-shadow: 0 2px 18px rgba(74, 42, 117, 0.07); border: 1px solid var(--border); }
+    .infographic-wrap svg { width: 100%; height: auto; display: block; }
+    .infographic-caption { text-align: center; font-style: italic; font-size: 12.5px; color: var(--text-muted); margin-top: 14px; letter-spacing: 0.05em; }
+
+    .back-row { text-align: center; margin: 50px auto 30px; }
+    .back-link { display: inline-block; font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--purple-dark); text-decoration: none; padding: 12px 32px; border: 1px solid var(--purple); border-radius: 32px; transition: all 0.35s ease; background: white; }
+    .back-link:hover { background: var(--purple); color: white; transform: translateY(-2px); }
+    .back-link::before { content: '← '; opacity: 0.7; }
+
+    .contact-band { background: linear-gradient(135deg, var(--lilac-soft) 0%, white 100%); margin-top: 40px; padding: 60px 32px 50px; border-top: 1px solid var(--border); }
+    .contact-inner { max-width: var(--max-width); margin: 0 auto; }
+    .contact-eyebrow { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 600; }
+    .contact-heading { text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; color: var(--purple-dark); margin-bottom: 36px; }
+    .contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px; }
+    .contact-card { background: white; padding: 28px 28px; border-radius: 8px; box-shadow: 0 2px 14px rgba(74, 42, 117, 0.07); border: 1px solid var(--border); display: flex; gap: 18px; align-items: flex-start; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .contact-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12); }
+    .contact-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #EFE6F7, #F1EAF5); display: flex; align-items: center; justify-content: center; color: var(--purple-dark); }
+    .contact-content { flex: 1; }
+    .contact-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 12.5px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--purple-dark); margin-bottom: 8px; }
+    .contact-content p { font-size: 14.5px; line-height: 1.65; color: var(--text); margin: 0; }
+    .contact-content a { color: var(--purple-dark); text-decoration: none; border-bottom: 1px solid var(--gold); transition: color 0.3s; }
+    .contact-content a:hover { color: var(--purple); }
+    .copyright { text-align: center; font-size: 11.5px; color: var(--text-muted); opacity: 0.7; letter-spacing: 0.12em; padding-top: 24px; border-top: 1px solid var(--border); }
+
+    @media (max-width: 800px) {
+      nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
+      .nav-links { flex-wrap: wrap; gap: 0; justify-content: center; }
+      .nav-links a { font-size: 10.5px; padding: 6px 10px; letter-spacing: 0.2em; }
+      .page-header { padding: 50px 24px 60px; }
+      .page-title { white-space: normal; font-size: 28px; }
+      .main-content { padding: 40px 22px 24px; }
+      .infographic-wrap { padding: 18px 12px; }
+      .contact-cards { grid-template-columns: 1fr; gap: 16px; }
+      .contact-band { padding: 50px 24px 40px; }
+      .contact-card { padding: 22px 22px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="lab-mark">Dr. Alqahtani Aldanah</a>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="research.html" class="active">research</a></li>
+      <li><a href="students.html">students</a></li>
+      <li><a href="concepts.html">concepts</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <p class="page-eyebrow">Research</p>
+    <h1 class="page-title">My Work at a Glance</h1>
+    <p class="page-lead">From molecules, to meaning, to impact.</p>
+  </header>
+
+  <main class="main-content">
+
+    <p class="lead-para">
+      My research traces plant <strong>secondary metabolites</strong> from their origin in DNA all the way to the molecules themselves — combining <em>genomics, transcriptomics, metabolomics,</em> and <em>bioinformatics</em>. The goal is to understand how Saudi plants build their natural chemistry, and to translate that chemistry into discoveries for <strong>human health, biotechnology,</strong> and <strong>environmental sustainability</strong>.
+    </p>
+
+    <figure class="infographic-wrap">
+      <svg viewBox="0 0 500 575" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="infogTitle">
+        <title id="infogTitle">Research at a glance — a connected flow</title>
+        <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#C9A55C"/></marker></defs>
+        <text x="250" y="24" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="17" font-weight="500" fill="#6B4DA0">Research at a Glance</text>
+        <line x1="210" y1="35" x2="290" y2="35" stroke="#C9A55C" stroke-width="1"/>
+        <text x="250" y="52" text-anchor="middle" font-family="'EB Garamond', serif" font-size="11" font-style="italic" fill="#6B6275">From molecular layers → to discovery → to impact</text>
+        <text x="30" y="80" font-family="'Cormorant Garamond', serif" font-size="10" font-weight="600" fill="#9C7E40" letter-spacing="2">01 · MULTI-OMICS &amp; BIOINFORMATICS</text>
+        <rect x="30" y="90" width="290" height="120" rx="8" fill="#EFE6F7" stroke="#8E6BC4" stroke-width="0.8"/>
+        <text x="175" y="110" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="14" font-weight="600" fill="#6B4DA0">Multi-omics</text>
+        <line x1="140" y1="117" x2="210" y2="117" stroke="#C9A55C" stroke-width="0.6"/>
+        <rect x="40" y="127" width="65" height="32" rx="5" fill="white" stroke="#8E6BC4" stroke-width="0.4"/>
+        <text x="72.5" y="141" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" font-weight="500" fill="#6B4DA0">Genomics</text>
+        <text x="72.5" y="153" text-anchor="middle" font-family="'EB Garamond', serif" font-size="8" font-style="italic" fill="#6B6275">gDNA</text>
+        <rect x="110" y="127" width="65" height="32" rx="5" fill="white" stroke="#8E6BC4" stroke-width="0.4"/>
+        <text x="142.5" y="141" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" font-weight="500" fill="#6B4DA0">Transcript-</text>
+        <text x="142.5" y="153" text-anchor="middle" font-family="'EB Garamond', serif" font-size="8" font-style="italic" fill="#6B6275">omics · mRNA</text>
+        <rect x="180" y="127" width="65" height="32" rx="5" fill="white" stroke="#8E6BC4" stroke-width="0.4"/>
+        <text x="212.5" y="141" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" font-weight="500" fill="#6B4DA0">Metabolo-</text>
+        <text x="212.5" y="153" text-anchor="middle" font-family="'EB Garamond', serif" font-size="8" font-style="italic" fill="#6B6275">mics</text>
+        <rect x="250" y="127" width="65" height="32" rx="5" fill="white" stroke="#8E6BC4" stroke-width="0.4"/>
+        <text x="282.5" y="141" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" font-weight="500" fill="#6B4DA0">Epigenomics</text>
+        <text x="282.5" y="153" text-anchor="middle" font-family="'EB Garamond', serif" font-size="8" font-style="italic" fill="#6B6275">methylation</text>
+        <text x="175" y="180" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" font-style="italic" fill="#6B6275">Integrated across molecular layers</text>
+        <text x="175" y="195" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" font-style="italic" fill="#6B6275">from DNA to small molecules</text>
+        <rect x="330" y="90" width="140" height="120" rx="8" fill="#EFE6F7" stroke="#8E6BC4" stroke-width="0.8"/>
+        <text x="400" y="110" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="13" font-weight="600" fill="#6B4DA0">Bioinformatics</text>
+        <line x1="372" y1="117" x2="428" y2="117" stroke="#C9A55C" stroke-width="0.6"/>
+        <text x="400" y="135" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Tools &amp; pipelines</text>
+        <text x="400" y="152" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Data analysis</text>
+        <text x="400" y="169" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Phylogenetics</text>
+        <text x="400" y="186" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Comparative</text>
+        <text x="400" y="201" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">genomics</text>
+        <path d="M 250 215 L 250 240" stroke="#C9A55C" stroke-width="1.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="3,2"/>
+        <text x="265" y="232" font-family="'EB Garamond', serif" font-size="9" font-style="italic" fill="#9C7E40">enables</text>
+        <text x="30" y="265" font-family="'Cormorant Garamond', serif" font-size="10" font-weight="600" fill="#9C7E40" letter-spacing="2">02 · WHAT WE DISCOVER</text>
+        <rect x="30" y="275" width="140" height="82" rx="8" fill="#FAF7FC" stroke="#A98BD4" stroke-width="0.8"/>
+        <text x="100" y="296" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="600" fill="#6B4DA0">Plant Evolution</text>
+        <text x="100" y="316" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">How Arabian flora</text>
+        <text x="100" y="331" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">adapted to desert,</text>
+        <text x="100" y="346" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">salt &amp; arid life</text>
+        <rect x="180" y="275" width="140" height="82" rx="8" fill="#FAF7FC" stroke="#A98BD4" stroke-width="0.8"/>
+        <text x="250" y="296" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="600" fill="#6B4DA0">Plant Chemistry</text>
+        <text x="250" y="316" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Bioactive compounds</text>
+        <text x="250" y="331" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">in native plants</text>
+        <text x="250" y="349" text-anchor="middle" font-family="'EB Garamond', serif" font-size="9" font-style="italic" fill="#6B6275">(quercetin, kaempferol…)</text>
+        <rect x="330" y="275" width="140" height="82" rx="8" fill="#FAF7FC" stroke="#A98BD4" stroke-width="0.8"/>
+        <text x="400" y="296" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="600" fill="#6B4DA0">Stress Genes</text>
+        <text x="400" y="316" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Salinity, drought &amp;</text>
+        <text x="400" y="331" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">climate-tolerance</text>
+        <text x="400" y="346" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">pathways</text>
+        <path d="M 250 363 L 250 388" stroke="#C9A55C" stroke-width="1.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="3,2"/>
+        <text x="265" y="380" font-family="'EB Garamond', serif" font-size="9" font-style="italic" fill="#9C7E40">drives</text>
+        <text x="30" y="413" font-family="'Cormorant Garamond', serif" font-size="10" font-weight="600" fill="#9C7E40" letter-spacing="2">03 · APPLICATIONS &amp; CONSERVATION</text>
+        <rect x="30" y="423" width="140" height="74" rx="8" fill="#F1EAF5" stroke="#9C7E40" stroke-width="0.8"/>
+        <text x="100" y="445" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="600" fill="#6B4DA0">Biotechnology</text>
+        <text x="100" y="464" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Genomics-driven</text>
+        <text x="100" y="481" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Conservation tools</text>
+        <rect x="180" y="423" width="140" height="74" rx="8" fill="#F1EAF5" stroke="#9C7E40" stroke-width="0.8"/>
+        <text x="250" y="445" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="600" fill="#6B4DA0">Biodiversity</text>
+        <text x="250" y="464" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Native Arabian flora</text>
+        <text x="250" y="481" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Conservation genomics</text>
+        <rect x="330" y="423" width="140" height="74" rx="8" fill="#F1EAF5" stroke="#9C7E40" stroke-width="0.8"/>
+        <text x="400" y="445" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="12" font-weight="600" fill="#6B4DA0">Sustainability</text>
+        <text x="400" y="464" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Natural resources</text>
+        <text x="400" y="481" text-anchor="middle" font-family="'EB Garamond', serif" font-size="10" fill="#2C2630">Vision 2030</text>
+        <path d="M 250 503 L 250 526" stroke="#C9A55C" stroke-width="1.5" fill="none" marker-end="url(#arrow)" stroke-dasharray="3,2"/>
+        <text x="265" y="518" font-family="'EB Garamond', serif" font-size="9" font-style="italic" fill="#9C7E40">delivers</text>
+        <rect x="30" y="533" width="215" height="30" rx="15" fill="#8E6BC4"/>
+        <text x="137.5" y="552" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="11" font-weight="500" fill="white" letter-spacing="2">HUMAN HEALTH</text>
+        <rect x="255" y="533" width="215" height="30" rx="15" fill="#8E6BC4"/>
+        <text x="362.5" y="552" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="11" font-weight="500" fill="white" letter-spacing="2">SUSTAINABILITY</text>
+      </svg>
+      <figcaption class="infographic-caption">From molecular layers, through discovery, to real-world impact</figcaption>
+    </figure>
+
+    <div class="back-row">
+      <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+  </main>
+
+  <section class="contact-band" id="contact">
+    <div class="contact-inner">
+      <p class="contact-eyebrow">Get in Touch</p>
+      <h3 class="contact-heading">Contact &amp; Address</h3>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-content">
+            <h4>Address</h4>
+            <p>Department of Biology<br>Prince Sattam bin Abdulaziz University<br>Address 18, Al-Kharj 11942<br>Riyadh Province · Kingdom of Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-content">
+            <h4>Email</h4>
+            <p><a href="mailto:ald.alqahtani@psau.edu.sa">ald.alqahtani@psau.edu.sa</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Plant Evolutionary Genomics &amp; Bioinformatics</p>
+    </div>
+  </section>
+
+</body>
+</html>

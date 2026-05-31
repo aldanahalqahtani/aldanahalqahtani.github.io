@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concepts &amp; Resources · Dr. Alqahtani A. Aldanah</title>
+  <meta name="description" content="A growing library of key terms, processes, and visual resources in plant evolutionary genomics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --cream: #FAF7FC; --lilac-soft: #F1EAF5; --purple: #8E6BC4; --purple-dark: #6B4DA0; --purple-light: #A98BD4; --purple-soft: #EFE6F7; --gold: #C9A55C; --gold-dark: #9C7E40; --text: #2C2630; --text-muted: #6B6275; --border: rgba(142, 107, 196, 0.15); --max-width: 1100px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'EB Garamond', Georgia, serif; color: var(--text); background: var(--cream); line-height: 1.75; font-size: 17px; -webkit-font-smoothing: antialiased; }
+
+    nav { background: var(--purple-dark); padding: 20px 6vw; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .lab-mark { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 16px; color: white; letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none; }
+    .nav-links { display: flex; gap: 4px; list-style: none; }
+    .nav-links a { font-family: 'Cormorant Garamond', serif; color: rgba(255,255,255,0.9); font-size: 12px; letter-spacing: 0.3em; text-transform: lowercase; text-decoration: none; padding: 8px 16px; border: 1px solid transparent; transition: all 0.35s; }
+    .nav-links a:hover { border-color: rgba(255,255,255,0.6); color: white; }
+    .nav-links a.active { border-color: var(--gold); color: white; }
+
+    .page-header { background: linear-gradient(135deg, var(--purple) 0%, var(--purple-dark) 100%); color: white; padding: 70px 24px 80px; text-align: center; position: relative; overflow: hidden; }
+    .page-header::before { content: ''; position: absolute; inset: 0; opacity: 0.07; background-image: radial-gradient(circle at 20% 30%, white 1.5px, transparent 2.5px), radial-gradient(circle at 80% 70%, white 1.5px, transparent 2.5px); background-size: 90px 90px; }
+    .page-header > * { position: relative; z-index: 1; }
+    .page-eyebrow { font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(30px, 4.5vw, 48px); margin-bottom: 14px; letter-spacing: 0.01em; }
+    .page-title-ar { font-family: 'Amiri', serif; font-size: 22px; color: var(--gold); margin-bottom: 26px; direction: rtl; }
+    .page-lead { max-width: 620px; margin: 0 auto; font-size: 16px; line-height: 1.7; opacity: 0.95; font-style: italic; }
+
+    .intro-section { max-width: 820px; margin: 70px auto 30px; padding: 0 32px; text-align: center; }
+    .intro-section p { font-size: 17.5px; line-height: 1.9; color: var(--text); margin-bottom: 18px; }
+    .intro-section p em { font-style: italic; color: var(--purple-dark); font-weight: 500; }
+    .intro-section .growing-note { font-style: italic; color: var(--text-muted); font-size: 15px; padding-top: 12px; }
+    .divider { width: 60px; height: 1px; background: var(--gold); margin: 30px auto; }
+
+    .section-block { padding: 50px 32px 30px; max-width: var(--max-width); margin: 0 auto; }
+    .section-heading { text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 32px; color: var(--purple-dark); margin-bottom: 8px; }
+    .section-subheading { text-align: center; font-style: italic; color: var(--text-muted); font-size: 15.5px; margin-bottom: 40px; }
+
+    /* Concept cards */
+    .concepts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; }
+    .concept-card {
+      background: white;
+      padding: 26px 26px;
+      border-radius: 8px;
+      box-shadow: 0 2px 14px rgba(74, 42, 117, 0.06);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--gold);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .concept-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12);
+    }
+    .concept-tag {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 10px;
+    }
+    .concept-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--purple-dark);
+      margin-bottom: 10px;
+    }
+    .concept-card p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--text);
+      margin: 0;
+    }
+    .concept-card .visual-slot {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+    .concept-card .visual-slot img,
+    .concept-card .visual-slot video { width: 100%; border-radius: 4px; }
+
+    /* Process cards — wider, accommodate diagrams */
+    .processes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
+    .process-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 14px rgba(74, 42, 117, 0.06);
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .process-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12); }
+    .process-visual {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, var(--purple-soft) 0%, var(--lilac-soft) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--purple-light);
+    }
+    .process-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .process-body { padding: 22px 26px; }
+    .process-body h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 19px; color: var(--purple-dark); margin-bottom: 8px; }
+    .process-body p { font-size: 14.5px; line-height: 1.65; color: var(--text-muted); margin: 0; }
+
+    /* Visual library — same structure as posters */
+    .library-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; }
+    .library-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 14px rgba(74, 42, 117, 0.06);
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .library-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12); }
+    .library-visual {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .library-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .library-visual .type-badge {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(255,255,255,0.92);
+      color: var(--purple-dark);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 10px; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 12px;
+    }
+    .library-body { padding: 18px 22px; }
+    .library-body h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 17px; color: var(--purple-dark); margin-bottom: 6px; }
+    .library-body p { font-size: 13.5px; line-height: 1.55; color: var(--text-muted); margin: 0; }
+
+    /* Coming-soon empty state */
+    .coming-soon {
+      max-width: 600px; margin: 0 auto;
+      padding: 50px 32px; text-align: center;
+      background: white; border: 1px dashed var(--border); border-radius: 8px;
+    }
+    .coming-soon-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple-soft), var(--lilac-soft));
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px; color: var(--purple-dark);
+    }
+    .coming-soon h4 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 20px; color: var(--purple-dark); margin-bottom: 8px; }
+    .coming-soon p { font-style: italic; font-size: 14.5px; color: var(--text-muted); line-height: 1.65; }
+
+    /* Contact band */
+    .contact-band { background: linear-gradient(135deg, var(--lilac-soft) 0%, white 100%); margin-top: 60px; padding: 60px 32px 50px; border-top: 1px solid var(--border); }
+    .contact-inner { max-width: var(--max-width); margin: 0 auto; }
+    .contact-eyebrow { text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 600; }
+    .contact-heading { text-align: center; font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 28px; color: var(--purple-dark); margin-bottom: 36px; }
+    .contact-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px; max-width: 880px; margin-left: auto; margin-right: auto; }
+    .contact-card { background: white; padding: 28px 28px; border-radius: 8px; box-shadow: 0 2px 14px rgba(74, 42, 117, 0.07); border: 1px solid var(--border); display: flex; gap: 18px; align-items: flex-start; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .contact-card:hover { transform: translateY(-3px); box-shadow: 0 6px 22px rgba(74, 42, 117, 0.12); }
+    .contact-icon { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #EFE6F7, #F1EAF5); display: flex; align-items: center; justify-content: center; color: var(--purple-dark); }
+    .contact-content { flex: 1; }
+    .contact-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 12.5px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--purple-dark); margin-bottom: 8px; }
+    .contact-content p { font-size: 14.5px; line-height: 1.65; color: var(--text); margin: 0; }
+    .contact-content a { color: var(--purple-dark); text-decoration: none; border-bottom: 1px solid var(--gold); transition: color 0.3s; }
+    .copyright { text-align: center; font-size: 11.5px; color: var(--text-muted); opacity: 0.7; letter-spacing: 0.12em; padding-top: 24px; border-top: 1px solid var(--border); max-width: 880px; margin: 0 auto; }
+
+    @media (max-width: 800px) {
+      nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
+      .nav-links { flex-wrap: wrap; gap: 0; justify-content: center; }
+      .nav-links a { font-size: 10.5px; padding: 6px 10px; letter-spacing: 0.2em; }
+      .page-header { padding: 50px 24px 60px; }
+      .intro-section { margin: 50px auto 20px; padding: 0 22px; }
+      .section-block { padding: 40px 22px 20px; }
+      .concepts-grid, .processes-grid, .library-grid { grid-template-columns: 1fr; gap: 16px; }
+      .contact-cards { grid-template-columns: 1fr; gap: 16px; max-width: 100%; }
+      .contact-band { padding: 50px 24px 40px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="lab-mark">Dr. Alqahtani Aldanah</a>
+    <ul class="nav-links">
+      <li><a href="index.html">home</a></li>
+      <li><a href="research.html">research</a></li>
+      <li><a href="students.html">students</a></li>
+      <li><a href="concepts.html" class="active">concepts</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <p class="page-eyebrow">Learn &middot; Explore</p>
+    <h1 class="page-title">Concepts &amp; Resources</h1>
+    <p class="page-title-ar">المفاهيم والمصادر</p>
+    <p class="page-lead">A growing library of terms, processes, and ideas behind plant evolutionary genomics.</p>
+  </header>
+
+  <section class="intro-section">
+    <p>This page is a reference space for the key concepts, methods, and biological processes that shape my research — from <em>genome assembly</em> and <em>phylogenetics</em> to <em>plant defense chemistry</em> and <em>metabolic pathways</em>.</p>
+    <p class="growing-note">This library grows alongside our research. New entries, infographics, and resources are added as the lab and its discoveries develop.</p>
+    <div class="divider"></div>
+  </section>
+
+  <!-- ============ SECTION 1: CONCEPTS & TERMS ============ -->
+  <section class="section-block">
+    <h2 class="section-heading">Concepts &amp; Terms</h2>
+    <p class="section-subheading">Definitions and short explanations</p>
+
+    <!--
+      TO ADD A CONCEPT: Copy one of the <div class="concept-card">...</div> blocks below and update its contents.
+      You can optionally include a small image inside <div class="visual-slot"></div> at the bottom of each card.
+    -->
+
+    <div class="concepts-grid">
+
+      <!-- Sample concept #1 (you can keep, edit, or remove) -->
+      <div class="concept-card">
+        <span class="concept-tag">Plant Biology</span>
+        <h4>Secondary Metabolite</h4>
+        <p>A natural molecule produced by a plant that is not directly involved in basic growth or reproduction, but that helps the plant survive challenges like predators, drought, or salt. Many of these compounds become medicines and natural products.</p>
+        <!-- Optional visual:
+        <div class="visual-slot"><img src="images/secondary-metabolite.jpg" alt="Secondary metabolite diagram"></div>
+        -->
+      </div>
+
+      <!-- Sample concept #2 -->
+      <div class="concept-card">
+        <span class="concept-tag">Multi-omics</span>
+        <h4>Transcriptome</h4>
+        <p>The complete set of messenger RNA (mRNA) molecules present in a cell or tissue at a given moment — showing which genes are actively switched on. Studying it reveals how a plant responds to its environment in real time.</p>
+      </div>
+
+      <!-- Sample concept #3 -->
+      <div class="concept-card">
+        <span class="concept-tag">Bioinformatics</span>
+        <h4>Bioprospecting</h4>
+        <p>The systematic search for valuable molecules in nature — particularly in plants, microbes, and marine organisms — that can be developed into medicines, foods, or sustainable industrial products.</p>
+      </div>
+
+      <!-- ADD MORE CONCEPT CARDS HERE -->
+
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2: PROCESSES & MECHANISMS ============ -->
+  <section class="section-block">
+    <h2 class="section-heading">Processes &amp; Mechanisms</h2>
+    <p class="section-subheading">How things actually work — illustrated</p>
+
+    <!--
+      TO ADD A PROCESS: Copy one of the <div class="process-card">...</div> blocks.
+      The <div class="process-visual"> can hold either:
+        - An infographic image:  <img src="images/your-diagram.png" alt="...">
+        - An embedded SVG diagram
+        - Leave it empty for now — it shows a soft lilac placeholder.
+    -->
+
+    <div class="coming-soon">
+      <div class="coming-soon-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        </svg>
+      </div>
+      <h4>Coming Soon</h4>
+      <p>Visual explanations of key biological processes — DNA to metabolites, salt stress response, phylogenetic inference, and more — will be added here over time.</p>
+    </div>
+
+    <!-- EXAMPLE PROCESS CARD (uncomment when ready):
+
+    <div class="processes-grid">
+      <div class="process-card">
+        <div class="process-visual">
+          <img src="images/dna-to-metabolite.png" alt="DNA to metabolite flow diagram">
+        </div>
+        <div class="process-body">
+          <h4>From DNA to Metabolite</h4>
+          <p>A walkthrough of how genetic information flows from DNA to mRNA to the final chemical compound produced inside a plant cell.</p>
+        </div>
+      </div>
+    </div>
+
+    -->
+
+  </section>
+
+  <!-- ============ SECTION 3: VISUAL LIBRARY ============ -->
+  <section class="section-block">
+    <h2 class="section-heading">Visual Library</h2>
+    <p class="section-subheading">Infographics, illustrations, and short videos</p>
+
+    <!--
+      TO ADD AN ITEM:
+      1. Copy a <div class="library-card">...</div> block.
+      2. Put your image/video in an "images" folder next to this file.
+      3. Update src="images/your-file.jpg" and the title/description.
+      4. The .type-badge shows what kind of content it is — change to "VIDEO", "INFOGRAPHIC", "PHOTO", etc.
+    -->
+
+    <div class="coming-soon">
+      <div class="coming-soon-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21,15 16,10 5,21"/>
+        </svg>
+      </div>
+      <h4>Coming Soon</h4>
+      <p>Infographics, illustrations, and short educational videos from the lab will be collected here.</p>
+    </div>
+
+    <!-- EXAMPLE LIBRARY CARD (uncomment when ready):
+
+    <div class="library-grid">
+      <div class="library-card">
+        <div class="library-visual">
+          <img src="images/sample-infographic.png" alt="Infographic title">
+          <span class="type-badge">Infographic</span>
+        </div>
+        <div class="library-body">
+          <h4>Item Title</h4>
+          <p>Short description of the visual or video.</p>
+        </div>
+      </div>
+    </div>
+
+    -->
+
+  </section>
+
+  <!-- Contact band -->
+  <section class="contact-band" id="contact">
+    <div class="contact-inner">
+      <p class="contact-eyebrow">Get in Touch</p>
+      <h3 class="contact-heading">Contact &amp; Address</h3>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-content">
+            <h4>Address</h4>
+            <p>Department of Biology<br>Prince Sattam bin Abdulaziz University<br>Address 18, Al-Kharj 11942<br>Riyadh Province · Kingdom of Saudi Arabia</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-content">
+            <h4>Email</h4>
+            <p><a href="mailto:ald.alqahtani@psau.edu.sa">ald.alqahtani@psau.edu.sa</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 Plant Evolutionary Genomics &amp; Bioinformatics</p>
+    </div>
+  </section>
+
+</body>
+</html>
